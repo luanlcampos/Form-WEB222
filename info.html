@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Info - Lima Campos</title>
+        <link rel="stylesheet" href="css/normalize.css" type="text/css" media="screen">
+        <script src="js/info.js"></script> 
+    </head>
+    <body>
+        <div class="header">
+            <a href="honesty.html" id="logo">
+                <img src="images/form-logo.png" alt="Form Logo" id="logo-pic">
+            </a>
+            <a href="honesty.html" id="logo-name">
+                <img src="images/logo-name.png" alt="Logo Name" id="logo-name-pic">
+            </a>
+        </div>
+        <div class="container">
+            <div class="left-col">
+                <h2>Navigation Links</h2>
+                <ul>
+                    <li><a href="honesty.html">Honesty Page</a></li>
+                    <li><a class="active" href="info.html">Info Page</a></li>
+                </ul>
+                
+            </div>
+            <div class="center-col">
+                <img src="images/form-img.png" alt="Unknown Person Image" width="256" height="256">
+                <form name="signup" id="signup"
+                      method="POST"
+                      action="https://httpbin.org/post"
+                      onsubmit="return formValidation();">  
+                      <!-- oninvalid="setCustomValidity('The name should start with a capital letter and no symbols are allowed.')" -->
+                    <label for="firstName"> First Name <br> </label> 
+                    <input id="firstName" name="firstName" placeholder="Enter Your First Name" type="text" required> 
+                    <br>
+
+                    <label for="lastname"> Last Name <br> </label> 
+                    <input id="lastname" name="lastname" placeholder="Enter Your Last Name" type="text" required> 
+                    <br>
+
+                    <label for="username"> Username <br> </label> 
+                    <input id="username" name="username" placeholder="Enter Your Username" type="text" required> 
+                    <br>
+
+                    <label for="password"> Password <br> </label> 
+                    <input id="password" name="password" placeholder="Enter Your Password" type="password" required>
+                    <br>
+
+                    <label for="confirm_password">Confirm Password <br></label>
+                    <input type="password" name="confirm-password" placeholder="Re-enter Your Password" id="confirm_password" required>
+                    <br>
+
+                    
+
+                    <label for="education">Education Level:</label> <br>
+                    <select id="education">
+                        <option value="0">- select -</option>
+                        <option value="technical-diploma">Technical Diploma</option>
+                        <option value="college-diploma">College Diploma</option>
+                        <option value="bach-diploma">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                        <option value="others">Others</option>
+                    </select>
+                    <br>
+
+                    <div class="radio">
+                        <label>Education Status:</label> <br>
+    
+                        <input type="radio" id="graduated" name="ed-status" value="graduated"> 
+                        <label for="graduated">Graduated</label> <br>
+
+                        <input type="radio" id="enrolled" name="ed-status" value="enrolled"> 
+                        <label for="enrolled">Current Enrolled</label> <br>
+                        
+                        <label><input type="radio" id="noGraduated" name="ed-status" value="noGraduated">Did not graduated</label> <br>
+                    </div>
+                    <br>
+                    <label for="email">Email</label> <br>
+                    <input type="email" id="email" placeholder="Enter your Email" name="email" required> 
+                    <br>
+
+                    <label for="age">Select Your Age:</label> <br>
+                    <input type="number" id="age" min="18" max="60" placeholder = "Select your age" required>
+
+                    <input type="hidden" name="lastName" id="lastName" value="Lima Campos" />
+                    <input type="hidden" name="studentId" id="studentId" value="119386191" />
+                    
+                    <br><br>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </form>
+
+                <p id="notes">*Tested in Firefox Brownser 74.0 (64-bit) and Google Chrome Version 80.0.3987.149 </p>
+            </div>
+            <div id="right-col"> 
+               <h2 id="error">Error log:</h2>
+             </div>
+        </div>
+
+       
+        <footer>&copy; All Rights Reserved.</footer>
+        </body>
+</HTML>
