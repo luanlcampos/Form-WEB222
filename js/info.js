@@ -9,29 +9,6 @@ function clearErrorLog() {
 }
 
 
-//function to check the radio list
-function checkRadio () {
-    var radios = document.getElementsByName("ed-status");
-    var radioLen = radios.length;
-    //var radioLen = document.signup.ed-status.length;
-    console.log(radioLen);
-    var validRadio = false;
-    //var flag = true;
-
-    for (var i = 0; i < radioLen; i++) {
-        if (radios[i].checked == true) {
-            validRadio = true;
-        }
-    }
-    if (!validRadio) {
-        messages = "<p>You have to check one item!</p>";
-        showErrorMsg(messages);
-        return false;
-    }
-    return true;
-}
-
-
 function formValidation(){
     clearErrorLog();
     var fName = document.getElementById("firstName");
@@ -97,7 +74,21 @@ function formValidation(){
     }
 
     //radio list validation
-    valid = checkRadio();
+    var radios = document.getElementsByName("ed-status");
+    var radioLen = radios.length;
+    console.log(radioLen);
+    var validRadio = false;
+
+    for (var i = 0; i < radioLen; i++) {
+        if (radios[i].checked == true) {
+            validRadio = true;
+        }
+    }
+    if (!validRadio) {
+        messages = "<p>You have to check one item!</p>";
+        showErrorMsg(messages);
+        valid= false;
+    }
 
 
     //required value selected in dropdown list
